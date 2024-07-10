@@ -1,0 +1,43 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+int main() {
+    cout<<endl;
+     srand(static_cast<unsigned int>(time(0)));
+    int random=rand()%100;
+    // cout<<random<<endl;
+    cout<<"------------------------------------"<<endl;
+    cout<<"  Welcome in the number GUESS game   "<<endl;
+    cout<<"------------------------------------"<<endl;
+     int num;
+     cout<<"    Can you guess the number ???      "<<endl;
+     cout<<"  If Yess!! Than guess the number   "<<endl;
+    cout<<"------------------------------------"<<endl;
+    cout<<"        Make the 1 Guess ->";
+     cin>>num;
+     int times=1;
+    while (num!=random){
+      if (num>random)
+      cout<<"  " <<num<<" is too high. Try "<<times+1<<" Guess-> ";
+      else
+      cout<<"  " <<num<<" is too low.  Try "<<times+1<<" Guess-> ";
+      cin>>num;
+       times++;
+
+    }
+    cout<<"------------------------------------"<<endl;
+    cout <<"  You Guessed the number in "<<times<<" try "<<endl;
+    if (times<=3)
+    cout<<"      You won a golden medal "<<endl;
+    else if(times<=6)
+    cout<<"      You won a silver medal "<<endl;
+    else if (times<=10)
+    cout<<"      You won a bronze medal "<<endl;
+    else 
+    cout<<"     Best Wishes for next time"<<endl;
+    cout<<"    Thankyou for playing the game "<<endl;
+    cout<<"------------------------------------"<<endl;
+    cout<<endl;
+
+return 0;
+}
